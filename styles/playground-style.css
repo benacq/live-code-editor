@@ -1,0 +1,160 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+}
+
+#env-playground {
+  background: #fff;
+}
+
+#env-playground > .editor-header {
+  height: 40px;
+  width: 100%;
+  background: #333;
+  display: flex;
+}
+
+#env-playground > .editor-header > #user-profile-wrap {
+  height: inherit;
+  display: flex;
+  color: #eee;
+  margin-top: 2.5px;
+  padding-left: 5px;
+  cursor: pointer;
+}
+
+#env-playground > .editor-header > #user-profile-wrap > #profile-pic {
+  height: 32px;
+  width: 32px;
+  right: 20px;
+  border-radius: 50%;
+}
+
+#env-playground > .editor-header > #user-profile-wrap > .caret-down {
+  padding-top: 16px;
+}
+#env-playground > .editor-header > .editor-control {
+  height: inherit;
+  width: 96%;
+  /* background-color: red; */
+  padding-right: 10px;
+}
+
+.editor-header > .editor-control > .editor-tab-wrapper {
+  height: inherit;
+  float: right;
+  padding: 5px;
+  display: flex;
+}
+
+#env-playground
+  > .editor-header
+  > .editor-control
+  > .editor-tab-wrapper
+  > .editor-tab {
+  height: 25px;
+  min-width: 50px;
+  margin-top: 3px;
+  border: 1px solid #888;
+  left: 20px;
+  background: rgb(88, 88, 88);
+  color: #eee;
+  text-align: center;
+  font-size: 15px;
+  padding-top: 2px;
+  cursor: default;
+  box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1),
+    0 10px 10px -5px rgba(0, 0, 0, 0.04);
+}
+#env-playground
+  > .editor-header
+  > .editor-control
+  > .editor-tab-wrapper
+  > .editor-tab:hover {
+  background: #000;
+}
+
+#env-playground > .code-env > .code-editor {
+  height: 330px;
+  position: relative;
+  background: #222;
+  display: flex;
+}
+
+#env-playground > .code-env > .code-editor > div {
+  height: 100%;
+  width: 33.333333%;
+  position: relative;
+  overflow: hidden;
+  cursor: default;
+  padding-bottom: 33px;
+}
+
+#env-playground > .code-env > .code-editor > .language > .environment {
+  width: 100%;
+  height: 100%;
+  resize: none;
+  border: none;
+}
+
+#env-playground > .code-env > .code-editor > div > .language-options {
+  background: #000;
+  height: 32px;
+  cursor: default;
+  color: #eee;
+  width: 100%;
+  padding-left: 5px;
+}
+
+#env-playground > .code-env > .code-editor > div > .language-options > h1 {
+  font-size: 20px;
+  display: inline;
+}
+
+#env-playground > .code-env > .code-editor > .html {
+  border-right: 15px solid #222;
+}
+
+#env-playground > .code-env > .code-editor > .js {
+  border-left: 15px solid #222;
+}
+#env-playground > .code-env > .code-editor > .deactivated {
+  display: none;
+}
+
+#env-playground > .code-env > .output-wrap {
+  background: #fff;
+  position: fixed;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  top: 0;
+  width: 100%;
+  cursor: row-resize;
+  border-top: 15px solid #222;
+  margin: 0 !important;
+  z-index: 100;
+}
+
+#env-playground > .code-env > .output-wrap > h4 {
+  color: #eee;
+  background: #000;
+  font-size: 20px;
+  cursor: default;
+  margin: 0 !important;
+  height: 32px;
+}
+
+#env-playground > .code-env > .output-wrap > iframe.output {
+  width: 100%;
+  border: none;
+  height: 100%;
+}

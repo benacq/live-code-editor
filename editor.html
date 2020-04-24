@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles/playground-style.css" />
+    <link rel="stylesheet" href="styles/font-awesome.min.css" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/ace/1.4.5/ace.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/ace/1.4.5/ext-emmet.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/ace/1.4.5/ext-language_tools.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/ace/1.4.5/ext-keybinding_menu.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/ace/1.4.5/ext-beautify.js"></script>
+    <script src="js/jquery.min.js"></script>
+    <script src="js/ResizeSensor.js"></script>
+    <script src="js/playground.js"></script>
+
+    <title>Code Playground</title>
+  </head>
+  <body>
+    <div id="env-playground">
+      <header class="editor-header">
+        <div class="editor-control">
+          <div class="editor-tab-wrapper">
+            <div class="editor-tab">HTML</div>
+            <div class="editor-tab">CSS</div>
+            <div class="editor-tab">JS</div>
+          </div>
+        </div>
+        <div id="user-profile-wrap">
+          <div id="profile-pic">
+            <img src="images/man.svg" alt="UNAVAILABLE" />
+          </div>
+          <!-- <div class="caret-down">
+            <i class="fa fa-caret-down"></i>
+          </div> -->
+        </div>
+      </header>
+
+      <div class="code-env">
+        <section class="code-editor flexbox">
+          <div id="html" class="html language activated">
+            <div class="language-options">
+              <h1>HTML</h1>
+            </div>
+            <div id="html-editor" class="environment"></div>
+          </div>
+
+          <div id="css" class="css language activated">
+            <div class="language-options">
+              <h1>CSS</h1>
+            </div>
+            <div id="css-editor" class="environment"></div>
+          </div>
+
+          <div id="js" class="js language activated">
+            <div class="language-options">
+              <h1>JAVASCRIPT</h1>
+            </div>
+            <div id="js-editor" class="environment"></div>
+          </div>
+        </section>
+
+        <section id="resizeableY" class="output-wrap">
+          <h4 id="output-header">OUTPUT</h4>
+          <iframe id="browser-output" class="output"> </iframe>
+        </section>
+      </div>
+    </div>
+  </body>
+</html>
